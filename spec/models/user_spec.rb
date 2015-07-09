@@ -17,11 +17,20 @@ RSpec.describe User, type: :model do
   		expect(u.valid?).to eq(false)
   	end
   	it "should fail if the email is not unique" do 
-  		u = User.new(email: "boring@email.com", username: "firstuser" )
+  		u = User.new(email: "boring@email.com", username: "firstuser")
   		u.save!
-  		v = User.new(email: "boring@email.com", username: "seconduser" )
+  		v = User.new(email: "boring@email.com", username: "seconduser")
   		expect(v.valid?).to eq(false)
   	end
-
+  	it "should fail if the username is not unique" do 
+  		u = User.new(email: "different@email.com", username: "firstuser")
+  		u.save!
+  		v = User.new(email: "boring@email.com", username: "firstuser")
+  		expect(v.valid?).to eq(false)
+  	end
+  	it "should fail with a username that is too long (>50 chars)" do
+  		u = User.new(email: "dave@me.com", username: "sdfjhadfgjhsdfgjsdfjhsdfshdfvsdgsdgfsfdgfdsfgsdfgsdgsdfgsd")
+  		expect(u.valid?).to eq(false)
+  	end
 	end
 end
