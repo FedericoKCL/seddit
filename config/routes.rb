@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     unlocks: 'users/unlocks',
   }
   get 'static_pages/index'
+  get 'subreddit/view/:id' => 'subreddit#view'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
