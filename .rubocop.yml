@@ -5,13 +5,14 @@ AllCops:
     - '**/Rakefile'
     - '**/config.ru'
   Exclude:
-    - 'Gemfile'
+    - '**/Gemfile'
     - 'db/**/*'
     - 'config/**/*'
     - 'script/**/*'
     - !ruby/regexp /old_and_unused\.rb$/
     - 'vendor/**/*'
     - 'spec/fixtures/**/*'
+    - 'bin/**'
 
 Style/Encoding:
   Enabled: false
