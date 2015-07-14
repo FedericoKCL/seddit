@@ -13,7 +13,7 @@ var SessionDropdownComponent = React.createClass({displayName: 'Session Dropdown
         "border-color": "#616161"
       };
       return (
-    		<li className="dropdown">
+        <li className="dropdown">
           <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             <Gravatar email={this.props.current_user_email} size="24" style={gravatarStyle}/>
             {this.props.current_user_username}
@@ -26,14 +26,14 @@ var SessionDropdownComponent = React.createClass({displayName: 'Session Dropdown
             <li><a href={this.props.destroy_user_session_path}>Logout</a></li>
           </ul>
         </li>
-    		);
+        );
     } else {
-    	return (<li><a href={this.props.new_user_session_path}>Login</a></li>);
+      return (<li><a href={this.props.new_user_session_path}>Login</a></li>);
     }
   },
 
   render: function() {
-  	return this.selectComponent();
+    return this.selectComponent();
   }
 });
 
