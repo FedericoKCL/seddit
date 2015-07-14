@@ -44,4 +44,6 @@ group :development, :test do
 
   # Rspec
   gem 'rspec-rails', '~> 3.0'
+
+  gem 'pry'
 end

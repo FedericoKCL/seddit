@@ -10,7 +10,7 @@ var NavBarComponent = React.createClass({displayName: 'Navbar Component',
 				    <nav>
 				      <ul className="nav navbar-nav navbar-right">
 				        <li><a href={this.props.root_path}>Home</a></li>
-				        <li><a href="#">Subreddits</a></li>
+				        <SubredditsDropdownComponent {...this.props}/>
 				        <SessionDropdownComponent {...this.props}/>
 				      </ul>
 				    </nav>

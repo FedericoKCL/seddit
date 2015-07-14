@@ -1,16 +1,13 @@
 class Post < ActiveRecord::Base
-
   validates(:title, presence: true, length: { maximum: 100 })
 
-  validates(:body, presence: true, if: "has_no_url?")
+  validates(:body, presence: true, if: self_post?)
 
   belongs_to :user
 
   has_many :comment
 
-  def is_self_post?
-    self.url.blank?
+  def self_post?
+    url.blank?
   end
-
-  alias_method :has_no_url?, :is_self_post?
 end
