@@ -1,12 +1,10 @@
-<% props = {  user_signed_in: user_signed_in?,
-              root_path: root_path,
-              new_user_session_path: new_user_session_path,
-              destroy_user_session_path: destroy_user_session_path,
-              subreddits: @subreddits } %>
-
-<% if user_signed_in? %>
-  <% props[:current_user_username] = current_user.username %>
-  <% props[:edit_user_registration_path] = edit_user_registration_path %>
-<% end %>
-
-<%= react_component 'NavbarComponent', props %>
+<%= react_component 'NavbarComponent',
+    {
+      user_signed_in: user_signed_in?,
+      root_path: root_path,
+      new_user_session_path: new_user_session_path,
+      destroy_user_session_path: destroy_user_session_path,
+      edit_user_registration_path: edit_user_registration_path,
+      current_user_username: (current_user.username if user_signed_in?),
+      subreddits: @subreddits,
+    } %>
