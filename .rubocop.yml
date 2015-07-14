@@ -13,6 +13,7 @@ AllCops:
     - 'vendor/**/*'
     - 'spec/fixtures/**/*'
     - 'bin/**'
+    - 'assets/javascripts/components.js'
 
 Style/Encoding:
   Enabled: false
