@@ -1,12 +1,24 @@
 var React = require('react');
+var Gravatar = require("react-gravatar");
+
 
 var SessionDropdownComponent = React.createClass({displayName: 'Session Dropdown Component',
 
   selectComponent: function() {
   	if(this.props.user_signed_in){
-    	return(
+      var gravatarStyle = {
+        "margin-right": "7px",
+        "border-style": "solid",
+        "border-width": "1px",
+        "border-color": "#616161"
+      };
+      return (
     		<li className="dropdown">
-          <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{this.props.current_user_username}<span className="caret"></span></a>
+          <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <Gravatar email={this.props.current_user_email} size="24" style={gravatarStyle}/>
+            {this.props.current_user_username}
+            <span className="caret" />
+          </a>
           <ul className="dropdown-menu">
             <li><a href="#">View Profile</a></li>
             <li><a href={this.props.edit_user_registration_path}>Edit Profile</a></li>
@@ -16,7 +28,7 @@ var SessionDropdownComponent = React.createClass({displayName: 'Session Dropdown
         </li>
     		);
     } else {
-    	return(<li><a href={this.props.new_user_session_path}>Login</a></li>);
+    	return (<li><a href={this.props.new_user_session_path}>Login</a></li>);
     }
   },
 
