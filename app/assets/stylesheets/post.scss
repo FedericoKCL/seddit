@@ -4,12 +4,8 @@
 
 /* override */
 
-.col-md-3 {
-  padding-left: 0px;
-}
-
-.user-summary-box {
-  width: 30%;
+.post-box {
+  width: 100%;
   margin-top: 15px;
 
   border-style: solid;
@@ -21,24 +17,26 @@
   padding-bottom: 15px;
 }
 
-.gravatar {
-  float: left;
-}
-
-.user-info {
+.post-head {
   margin-left: 10px;
 }
 
-.username {
-  font-size: 1.7em;
+.post-title {
+  font-size: 3em;
   font-weight: bold;
   margin-bottom: 0px;
+  margin: 0px;
+  p {
+    margin-bottom: 0px;
+  }
 }
 
-.email {
-  margin-top: 0px;
+.post-body {
+  margin-top: 25px;
+  font-size: 1.5em
 }
 
-.last-sign-in {
+.creation-date {
+  margin: 0px;
   font-size: 0.8em;
 }
