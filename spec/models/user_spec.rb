@@ -12,6 +12,10 @@ RSpec.describe User, type: :model do
       u = User.new(email: 'hello@example.com', username: '')
       expect(u.valid?).to eq(false)
     end
+    it 'should fail with a blank email' do
+      u = User.new(email:'   ', username:'myUser')
+      expect(u.valid?).to eq(false)
+    end
     it 'should fail with an invalid email address' do 
       u = User.new(email: '$@yahoo.c0m', username: 'testusername')
       expect(u.valid?).to eq(false)
