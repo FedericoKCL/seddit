@@ -44,6 +44,7 @@ group :development, :test do
 
   # Rspec
   gem 'rspec-rails', '~> 3.0'
+  gem 'nyan-cat-formatter'
 
   gem 'pry'
 end

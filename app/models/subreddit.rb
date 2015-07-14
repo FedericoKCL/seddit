@@ -7,8 +7,4 @@ class Subreddit < ActiveRecord::Base
   validates(:desc, presence: true)
 
   has_many :post
-
-  # def full_url
-  #   @full_url = Rails.application.routes.url_helpers.root_path + 'r/' + url
-  # end
 end
