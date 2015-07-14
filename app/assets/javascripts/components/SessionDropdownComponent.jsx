@@ -20,7 +20,7 @@ var SessionDropdownComponent = React.createClass({displayName: 'Session Dropdown
             <span className="caret" />
           </a>
           <ul className="dropdown-menu">
-            <li><a href="#">View Profile</a></li>
+            <li><a href={this.props.root_path + "u/" + this.props.current_user_username}>View Profile</a></li>
             <li><a href={this.props.edit_user_registration_path}>Edit Profile</a></li>
             <li role="separator" className="divider"></li>
             <li><a href={this.props.destroy_user_session_path}>Logout</a></li>
