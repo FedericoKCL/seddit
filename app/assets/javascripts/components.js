@@ -11,3 +11,5 @@ SubredditsDropdownComponent = require('./components/SubredditsDropdownComponent'
 SubredditHeaderComponent = require('./components/SubredditHeaderComponent')
 UserSummaryComponent = require('./components/UserSummaryComponent')
 PostComponent = require('./components/PostComponent')
+CommentListComponent = require('./components/CommentListComponent')
+CommentComponent = require('./components/CommentComponent')
