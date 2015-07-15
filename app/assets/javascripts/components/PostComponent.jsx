@@ -1,5 +1,4 @@
 var React = require("react");
-var Gravatar = require("react-gravatar");
 var Timestamp = require("react-time");
 
 var PostComponent = React.createClass({displayName: 'Post Component',
