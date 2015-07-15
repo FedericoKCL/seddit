@@ -1,5 +1,4 @@
 var React = require("react");
-var Timestamp = require("react-time");
 
 var CommentListComponent = React.createClass({displayName: 'Comment List Component',
   render: function() {

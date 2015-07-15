@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'subreddit/view/:id' => 'subreddit#view'
   get 'u/:username' => 'user#view'
   get 'p/:id' => 'post#view'
+  get 'r/:sr' => 'subreddit#view'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
