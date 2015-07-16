@@ -1,7 +1,4 @@
-class StaticPagesController < ApplicationController
-  include ApplicationHelper
-  
+class StaticPagesController < ApplicationController  
   def index
-    @subreddits = subreddits
   end
 end

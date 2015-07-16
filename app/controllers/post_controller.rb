@@ -1,5 +1,4 @@
 class PostController < ApplicationController
-
   def view
     @post = Post.find_by(id: params[:id])
     @poster = @post.user.username
