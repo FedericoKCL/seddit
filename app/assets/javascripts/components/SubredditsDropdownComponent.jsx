@@ -14,7 +14,7 @@ var SubredditsDropdownComponent = React.createClass({displayName: "Subreddits Dr
 
     return (
       <li className="dropdown">
-        <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Subreddits<span className="caret"></span></a>
+        <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SubReddits<span className="caret"></span></a>
         <ul className="dropdown-menu">
           {listItems}
         </ul>
