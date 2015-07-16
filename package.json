@@ -1,6 +1,8 @@
 {
 	"name": "seddit-app",
-	"devDependencies": {
+	"dependencies": {
+		"browserify": "~>6.3",
+		"browserify-incremental": "^1.4.0",
     "reactify": "^0.17.1",
     "react": "^0.12.0",
     "react-tools": "^0.12.1",
@@ -8,10 +10,6 @@
     "react-time": "3.0.0",
     "eslint": "0.24.1",
     "eslint-plugin-react": "2.7.0"
-  },
-	"dependencies": {
-		"browserify": "~>6.3",
-		"browserify-incremental": "^1.4.0"
 	},
   "engines": {
     "node": ">=0.10.0"
