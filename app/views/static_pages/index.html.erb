@@ -1,3 +1,5 @@
 <h1>Welcome to Seddit</h1>
 <!--  The path of the link should be implemented with a helper -->
-<!-- <a href="localhost:3000/users/signup"> Sign Up (Redirected here) </a> -->
+<% if !(current_user) %>
+  <a href=<%= new_user_registration_path %> >Sign Up</a>
+<% end %>
