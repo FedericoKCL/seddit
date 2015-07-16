@@ -3,3 +3,14 @@
 <% if !(current_user) %>
   <a href=<%= new_user_registration_path %> >Sign Up</a>
 <% end %>
+
+<hr>
+
+<% @posts.each do |post| %>
+  <%= react_component 'PostBriefComponent', {
+    post: post,
+    comment_count: 1, # TODO: remove after db migration
+    user: 'Some bloody user', # TODO: remove after db migration
+    } %>
+  <hr>
+<% end %>
