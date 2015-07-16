@@ -1,7 +1,6 @@
 var React = require('react');
 var Gravatar = require("react-gravatar");
 
-
 var SessionDropdownComponent = React.createClass({displayName: 'Session Dropdown Component',
 
   selectComponent: function() {

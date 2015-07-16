@@ -1,7 +1,6 @@
 class StaticPagesController < ApplicationController
-  include ApplicationHelper
-  
   def index
-    @subreddits = subreddits
+    @posts = Post.all.order(created_at: :desc)
+    # TODO: when doing the db migration add info of the user
   end
 end
