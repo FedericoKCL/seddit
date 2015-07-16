@@ -46,6 +46,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'nyan-cat-formatter'
 
-  gem 'pry-rails'
-  gem 'pry-byebug'
+  # gem 'pry-rails'
+  # gem 'pry-byebug'
 end
