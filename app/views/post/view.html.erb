@@ -1,5 +1,12 @@
 <%= react_component 'PostComponent',
     {
       post: @post,
+      username: @poster,
+      root: root_path,
+      subreddit: @subreddit
     } %>
-<%= react_component 'CommentListComponent', {collection: @collection, root: @root}%>
+<%= react_component 'CommentListComponent',
+    {
+      collection: @collection,
+      root: root_path
+    } %>

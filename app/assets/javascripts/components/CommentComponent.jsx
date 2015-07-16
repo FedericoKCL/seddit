@@ -10,7 +10,7 @@ var CommentComponent = React.createClass({displayName: 'Comment Component',
             <div className="col-md-offset-0 col-md-4">
               <Gravatar email={ this.props.user.email } size="40" className="gravatar"/>
               <div className="col-md-2">
-                <p className="comment-username"> <a href={ this.props.root + "u/" + this.props.user.username } >{ this.props.user.username }</a> </p>
+                <p className="comment-username"> <a href={ this.props.root + "u/" + this.props.user.username } >{ this.props.user.username } </a> says</p>
               </div>
             </div>
           </div>
