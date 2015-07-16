@@ -1,1 +1,2 @@
-<%= react_component 'SubredditHeaderComponent', {} %>
+<%= react_component 'SubredditHeaderComponent', { subreddit: @subreddit } %>
+<%= react_component 'SubredditComponent', { collection: @collection, root: root_path} %>
