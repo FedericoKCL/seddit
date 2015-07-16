@@ -46,7 +46,7 @@ group :development, :test do
   # Rspec
   gem 'rspec-rails', '~> 3.0'
   gem 'nyan-cat-formatter'
-
-  # gem 'pry-rails'
-  # gem 'pry-byebug'
 end
+
+# Heroku integration
+gem 'rails_12factor', group: :production
