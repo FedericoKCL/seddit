@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150713120839) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "comments", force: :cascade do |t|
     t.string   "text",       null: false
     t.datetime "created_at", null: false
@@ -21,8 +24,8 @@ ActiveRecord::Schema.define(version: 20150713120839) do
     t.integer  "post_id"
   end
 
-  add_index "comments", ["post_id"], name: "index_comments_on_post_id"
-  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
+  add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
@@ -35,8 +38,8 @@ ActiveRecord::Schema.define(version: 20150713120839) do
     t.integer  "subreddit_id"
   end
 
-  add_index "posts", ["subreddit_id"], name: "index_posts_on_subreddit_id"
-  add_index "posts", ["user_id"], name: "index_posts_on_user_id"
+  add_index "posts", ["subreddit_id"], name: "index_posts_on_subreddit_id", using: :btree
+  add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
   create_table "subreddits", force: :cascade do |t|
     t.string   "name"
@@ -64,8 +67,8 @@ ActiveRecord::Schema.define(version: 20150713120839) do
     t.decimal  "karma"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  add_index "users", ["username"], name: "index_users_on_username"
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["username"], name: "index_users_on_username", using: :btree
 
 end
