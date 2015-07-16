@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     unlocks: 'users/unlocks',
   }
   get 'static_pages/index'
-  get 'subreddit/view/:id' => 'subreddit#view'
+  get 'r/:url' => 'subreddit#view'
   get 'u/:username' => 'user#view'
   get 'p/:id' => 'post#view'
 
