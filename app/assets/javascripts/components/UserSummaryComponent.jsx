@@ -2,7 +2,7 @@ var React = require("react");
 var Gravatar = require("react-gravatar");
 var Timestamp = require("react-time");
 
-var UserSummaryComponent = React.createClass({displayName: 'User Summary Component',
+var UserSummaryComponent = React.createClass({displayName: "User Summary Component",
   render: function() {
     return (
      <div className="row user-summary-box">

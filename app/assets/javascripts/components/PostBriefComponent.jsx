@@ -2,12 +2,12 @@ var React = require("react");
 var Timestamp = require("react-time");
 
 var PostBriefComponent = React.createClass({
-  displayName: 'Post Brief Component',
+  displayName: "Post Brief Component",
 
   render: function() {
     var link = (this.props.post.url) ?
                 this.props.post.url :
-                "p/" + this.props.post.id ;
+                "p/" + this.props.post.id;
     return (
       <div>
         <p className="post-title"><a href={link}>{this.props.post.title}</a></p>

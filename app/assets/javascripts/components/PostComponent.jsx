@@ -1,7 +1,7 @@
 var React = require("react");
 var Timestamp = require("react-time");
 
-var PostComponent = React.createClass({displayName: 'Post Component',
+var PostComponent = React.createClass({displayName: "Post Component",
   render: function() {
     return (
       <div className="row post-head post-box">

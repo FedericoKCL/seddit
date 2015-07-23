@@ -1,10 +1,10 @@
-var React = require('react');
+var React = require("react");
 var Gravatar = require("react-gravatar");
 
-var SessionDropdownComponent = React.createClass({displayName: 'Session Dropdown Component',
+var SessionDropdownComponent = React.createClass({displayName: "Session Dropdown Component",
 
   selectComponent: function() {
-  	if(this.props.user_signed_in){
+	if(this.props.user_signed_in){
       var gravatarStyle = {
         "margin-right": "7px",
         "border-style": "solid",

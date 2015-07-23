@@ -1,13 +1,13 @@
 var React = require("react");
 
-var CommentListComponent = React.createClass({displayName: 'Comment List Component',
+var CommentListComponent = React.createClass({displayName: "Comment List Component",
   render: function() {
 
-    var someData =[];
+    var someData = [];
 
-    for(key in this.props.collection) {
-      var comment = JSON.parse(key)
-      someData.push(<CommentComponent comment={ comment } user ={this.props.collection[key]} root = { this.props.root }/>)
+    for(var key in this.props.collection) {
+      var comment = JSON.parse(key);
+      someData.push(<CommentComponent comment={ comment } user ={this.props.collection[key]} root = { this.props.root }/>);
     }
 
     return (
