@@ -1,3 +1,14 @@
 <%= react_component 'SubredditHeaderComponent', {
-    # TODO: pass the needed props
+    subreddit: @subreddit
   } %>
+
+<hr>
+
+<% @posts.each do |post| %>
+  <%= react_component 'PostBriefComponent', {
+    post: post,
+    comment_count: 1, # TODO: remove after db migration
+    user: 'Some bloody user', # TODO: remove after db migration
+    } %>
+  <hr>
+<% end %>

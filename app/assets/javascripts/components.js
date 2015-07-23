@@ -12,5 +12,4 @@ UserSummaryComponent = require('./components/UserSummaryComponent');
 PostComponent = require('./components/PostComponent');
 CommentListComponent = require('./components/CommentListComponent');
 CommentComponent = require('./components/CommentComponent');
-SubredditComponent = require('./components/SubredditComponent');
 PostBriefComponent = require('./components/PostBriefComponent');
