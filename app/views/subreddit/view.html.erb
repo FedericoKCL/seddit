@@ -1,14 +1,21 @@
-<%= react_component 'SubredditHeaderComponent', {
-    subreddit: @subreddit
-  } %>
+<div id="subreddit-header"></div>
+<script>
+	React.render(SubredditHeaderComponent, {
+		subreddit: <%= @subreddit %>
+	}),
+	document.getElementById("subreddit-header")
+</script>
 
 <hr>
 
-<% @posts.each do |post| %>
-  <%= react_component 'PostBriefComponent', {
-    post: post,
-    comment_count: 1, # TODO: remove after db migration
-    user: 'Some bloody user', # TODO: remove after db migration
-    } %>
-  <hr>
-<% end %>
+<div id="posts"></div>
+<script>
+	React.render(PostBriefListComponent, {
+		posts: <%= @posts.html_safe %>
+	}),
+	document.getElementById("posts");
+</script>
+
+
+
+

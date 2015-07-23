@@ -1,13 +1,21 @@
-<%= react_component 'PostComponent',
-    {
-      post: @post,
-      username: @poster,
-      root: root_path,
-      subreddit: @subreddit
-    } %>
+<div id="post"></div>
+<script>
+   React.createComponent(PostComponent, {
+      post: <%= @post %>,
+      username: <%= @poster %>,
+      root: <%= root_path %>,
+      subreddit: <%= @subreddit %>
+   }),
+   document.getElementById("post")
+</script>
 
-<%= react_component 'CommentListComponent',
-    {
-      collection: @collection,
-      root: root_path
-    } %>
+
+<div class="comment-list"></div>
+<script>
+    React.createComponent(CommentListComponent, {
+      collection: <%= @collection %>
+      root: <%= root_path %>
+    }),
+    document.getElementById("comment-list")
+</script>
+

@@ -4,17 +4,16 @@ Rails.application.routes.draw do
     passwords: 'users/passwords',
     registrations: 'users/registrations',
     sessions: 'users/sessions',
-    unlocks: 'users/unlocks',
+    unlocks: 'users/unlocks'
   }
+  root 'static_pages#index'
   get 'static_pages/index'
   get 'r/:url' => 'subreddit#view'
   get 'u/:username' => 'user#view'
   get 'p/:id' => 'post#view'
 
-  # The priority is based upon order of creation: first created -> highest priority.
+  # Priority based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'static_pages#index'
-
 end
