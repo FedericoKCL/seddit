@@ -4,13 +4,16 @@
   <a href=<%= new_user_registration_path %> >Sign Up</a>
 <% end %>
 
+<!-- <div class="latest-post"></div>
+<script>
+	React.render(
+		React.createElement(PostBriefListComponent, {
+			post: <%= "#{@posts}".html_safe %>
+		}),
+		document.getElementById("latest-post")
+	);
+</script>
+ -->
 <hr>
 
-<div id="posts"></div>
-<script>
-	React.render(PostBriefListComponent, {
-		posts: <%= @posts.html_safe %>
-	}),
-	document.getElementById("posts");
-</script>
 

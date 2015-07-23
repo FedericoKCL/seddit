@@ -1,5 +1,5 @@
 import React from "react";
-import PostBriefComponent from "./PostBriefComponent";
+import PostBriefComponent from "./PostBriefComponent.jsx";
 
 const displayName = "PostBriefListComponent";
 const propTypes = {};
@@ -9,7 +9,7 @@ export default class PostBriefListComponent extends React.Component {
 		return (
 			<div>
 				{this.props.posts.map(function(post){
-					return <PostBriefComponent post={post} comment_count="1" user="bloddyUser" />;
+					return <PostBriefComponent post={post} comment_count="1" user="BloodyUser" />;
 				})}
 			</div>
 		);

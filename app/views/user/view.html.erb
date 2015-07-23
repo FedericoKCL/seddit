@@ -1,11 +1,13 @@
-<div id="user-summary"> </div>
+<div id="user-summary"></div>
 
 <script>
-	React.render(UserSummaryComponent, {
-		user: <%= "\"#{@user}\"" %>,
-        last_sign_in_at: <%= @user.last_sign_in_at %>
-	}),
-	document.getElementById("user-summary")
+	React.render(
+		React.createElement(UserSummaryComponent, {
+			user: <%= "\"#{@user}\"" %>,
+        
+		}),
+		document.getElementById("user-summary")
+	);
 </script>
 
 

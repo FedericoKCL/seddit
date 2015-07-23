@@ -1,4 +1,6 @@
 var React = require("react");
+var SubredditsDropdownComponent = require("./SubredditsDropdownComponent.jsx");
+var SessionDropdownComponent = require("./SessionDropdownComponent.jsx");
 
 var NavBarComponent = React.createClass({displayName: "Navbar Component",
 
