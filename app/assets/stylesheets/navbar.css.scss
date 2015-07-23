@@ -1,0 +1,50 @@
+.row {
+	width: 100%;
+}
+
+
+.my-navbar {
+  background-color: black;
+ 	width: 100%;
+ 	
+ 	// navbar on top
+ 	top: 0;
+	//navbar always present when scrolling
+	position:fixed;
+}
+
+
+.navbar-list {
+	list-style: none;
+
+	//position it on the right
+	float: right;
+	margin-right: -15px;
+
+	ul { 
+		list-style-type: none ;
+		overflow: auto;
+	}
+	//display the <li> in line
+	li {
+		display: inline-block;
+	}
+	a {
+		color: #FFFFFF;
+		//gives the space from the top
+		display: block;
+
+		line-height: 20px;
+		padding: 15px;
+		//no underline
+		text-decoration: none;
+		
+		&:hover {
+		background-color: #DADADA;
+		}
+		//when clicked moves a bit
+		&:active {
+			background-color: #7D7D7D;
+		}
+	}
+}
