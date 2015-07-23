@@ -47,18 +47,18 @@
 	// Style for all pages
 	"use strict";
 
-	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../stylesheets/application.scss\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	__webpack_require__(238);
 
 	// Required for post summary pages (includes Comment)
-	__webpack_require__(238);
-	__webpack_require__(240);
-	__webpack_require__(242);
-	__webpack_require__(244);
+	__webpack_require__(239);
+	__webpack_require__(247);
+	__webpack_require__(249);
+	__webpack_require__(251);
 	__webpack_require__(1);
-	__webpack_require__(246);
-	__webpack_require__(254);
-	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"expose?SubdredditDropdownComponent!./components/SubdredditDropdownComponent.jsx\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-	__webpack_require__(256);
+	__webpack_require__(253);
+	__webpack_require__(255);
+	__webpack_require__(257);
+	__webpack_require__(259);
 
 /***/ },
 /* 1 */
@@ -30233,254 +30233,81 @@
 
 /***/ },
 /* 238 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["CommentComponent"] = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"-!/Users/Kappa/Desktop/1.2 Red Badger/Week 2/Day 4 - Pair Seddit/seddit/node_modules/babel-loader/index.js!/Users/Kappa/Desktop/1.2 Red Badger/Week 2/Day 4 - Pair Seddit/seddit/node_modules/eslint-loader/index.js!/Users/Kappa/Desktop/1.2 Red Badger/Week 2/Day 4 - Pair Seddit/seddit/app/assets/javascripts/components/CommentComponent.jsx\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["CommentComponent"] = __webpack_require__(240);
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 239 */,
 /* 240 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["CommentListComponent"] = __webpack_require__(241);
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
-
-/***/ },
-/* 241 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var React = __webpack_require__(3);
-
-	var CommentListComponent = React.createClass({ displayName: "Comment List Component",
-	  render: function render() {
-
-	    var someData = [];
-
-	    for (var key in this.props.collection) {
-	      var comment = JSON.parse(key);
-	      someData.push(React.createElement(CommentComponent, { comment: comment, user: this.props.collection[key], root: this.props.root }));
-	    }
-
-	    return React.createElement(
-	      "div",
-	      { className: "comment-list-box" },
-	      someData
-	    );
-	  }
-	});
-
-	module.exports = CommentListComponent;
-
-/***/ },
-/* 242 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["NavbarComponent"] = __webpack_require__(243);
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
-
-/***/ },
-/* 243 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var React = __webpack_require__(3);
-
-	var NavBarComponent = React.createClass({ displayName: "Navbar Component",
-
-	  render: function render() {
-	    return React.createElement(
-	      "header",
-	      { className: "navbar navbar-fixed-top navbar-inverse" },
-	      React.createElement(
-	        "div",
-	        { className: "container" },
-	        React.createElement(
-	          "a",
-	          { id: 'logo', href: this.props.root_path },
-	          "seddit"
-	        ),
-	        React.createElement(
-	          "nav",
-	          null,
-	          React.createElement(
-	            "ul",
-	            { className: "nav navbar-nav navbar-right" },
-	            React.createElement(
-	              "li",
-	              null,
-	              React.createElement(
-	                "a",
-	                { href: this.props.root_path },
-	                "Home"
-	              )
-	            ),
-	            React.createElement(SubredditsDropdownComponent, this.props),
-	            React.createElement(SessionDropdownComponent, this.props)
-	          )
-	        )
-	      )
-	    );
-	  }
-	});
-
-	module.exports = NavBarComponent;
-
-/***/ },
-/* 244 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["PostBriefComponent"] = __webpack_require__(245);
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
-
-/***/ },
-/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	var React = __webpack_require__(3);
 	var Timestamp = __webpack_require__(151);
-
-	var PostBriefComponent = React.createClass({
-	  displayName: "Post Brief Component",
-
+	var Gravatar = __webpack_require__(241);
+	var CommentComponent = React.createClass({ displayName: "Comment Component",
 	  render: function render() {
-	    var link = this.props.post.url ? this.props.post.url : "p/" + this.props.post.id;
 	    return React.createElement(
 	      "div",
-	      null,
+	      { className: "row comment-body comment-box" },
 	      React.createElement(
-	        "p",
-	        { className: "post-title" },
+	        "div",
+	        { className: "row" },
 	        React.createElement(
-	          "a",
-	          { href: link },
-	          this.props.post.title
+	          "div",
+	          { className: "comment-head" },
+	          React.createElement(
+	            "div",
+	            { className: "col-md-offset-0 col-md-4" },
+	            React.createElement(Gravatar, { email: this.props.user.email, size: "40", className: "gravatar" }),
+	            React.createElement(
+	              "div",
+	              { className: "col-md-2" },
+	              React.createElement(
+	                "p",
+	                { className: "comment-username" },
+	                " ",
+	                React.createElement(
+	                  "a",
+	                  { href: this.props.root + "u/" + this.props.user.username },
+	                  this.props.user.username,
+	                  " "
+	                ),
+	                " says"
+	              )
+	            )
+	          )
 	        )
 	      ),
 	      React.createElement(
 	        "p",
-	        { className: "created-at" },
-	        "Posted ",
-	        React.createElement(Timestamp, { value: this.props.post.created_at, titleFormat: "YYYY/MM/DD HH:mm", relative: true })
+	        { className: "comment-body" },
+	        " ",
+	        this.props.comment.text,
+	        " "
 	      ),
 	      React.createElement(
 	        "p",
-	        { className: "created-by" },
-	        "Submitted by ",
-	        React.createElement(
-	          "a",
-	          { href: "u/" + this.props.user },
-	          this.props.user
-	        )
-	      ),
-	      React.createElement(
-	        "p",
-	        { className: "comment-count" },
-	        this.props.comment_count,
-	        " comments"
+	        { className: "creation-date" },
+	        "Created: ",
+	        React.createElement(Timestamp, { value: this.props.comment.created_at, titleFormat: "YYYY/MM/DD HH:mm", relative: true })
 	      )
 	    );
 	  }
 	});
 
-	module.exports = PostBriefComponent;
+	module.exports = CommentComponent;
 
 /***/ },
-/* 246 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["SessionDropdownComponent"] = __webpack_require__(247);
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
-
-/***/ },
-/* 247 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var React = __webpack_require__(3);
-	var Gravatar = __webpack_require__(248);
-
-	var SessionDropdownComponent = React.createClass({ displayName: "Session Dropdown Component",
-
-	  selectComponent: function selectComponent() {
-	    if (this.props.user_signed_in) {
-	      var gravatarStyle = {
-	        "margin-right": "7px",
-	        "border-style": "solid",
-	        "border-width": "1px",
-	        "border-color": "#616161"
-	      };
-	      return React.createElement(
-	        "li",
-	        { className: "dropdown" },
-	        React.createElement(
-	          "a",
-	          { href: "#", className: "dropdown-toggle", "data-toggle": "dropdown", role: "button", "aria-haspopup": "true", "aria-expanded": "false" },
-	          React.createElement(Gravatar, { email: this.props.current_user_email, size: "24", style: gravatarStyle }),
-	          this.props.current_user_username,
-	          React.createElement("span", { className: "caret" })
-	        ),
-	        React.createElement(
-	          "ul",
-	          { className: "dropdown-menu" },
-	          React.createElement(
-	            "li",
-	            null,
-	            React.createElement(
-	              "a",
-	              { href: this.props.root_path + "u/" + this.props.current_user_username },
-	              "View Profile"
-	            )
-	          ),
-	          React.createElement(
-	            "li",
-	            null,
-	            React.createElement(
-	              "a",
-	              { href: this.props.edit_user_registration_path },
-	              "Edit Profile"
-	            )
-	          ),
-	          React.createElement("li", { role: "separator", className: "divider" }),
-	          React.createElement(
-	            "li",
-	            null,
-	            React.createElement(
-	              "a",
-	              { href: this.props.destroy_user_session_path },
-	              "Logout"
-	            )
-	          )
-	        )
-	      );
-	    } else {
-	      return React.createElement(
-	        "li",
-	        null,
-	        React.createElement(
-	          "a",
-	          { href: this.props.new_user_session_path },
-	          "Login"
-	        )
-	      );
-	    }
-	  },
-
-	  render: function render() {
-	    return this.selectComponent();
-	  }
-	});
-
-	module.exports = SessionDropdownComponent;
-
-/***/ },
-/* 248 */
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Generated by CoffeeScript 1.9.1
@@ -30488,11 +30315,11 @@
 
 	React = __webpack_require__(3);
 
-	md5 = __webpack_require__(249);
+	md5 = __webpack_require__(242);
 
-	querystring = __webpack_require__(250);
+	querystring = __webpack_require__(243);
 
-	isRetina = __webpack_require__(253);
+	isRetina = __webpack_require__(246);
 
 	module.exports = React.createClass({
 	  displayName: 'Gravatar',
@@ -30535,7 +30362,7 @@
 
 
 /***/ },
-/* 249 */
+/* 242 */
 /***/ function(module, exports) {
 
 	(function () {
@@ -30724,17 +30551,17 @@
 
 
 /***/ },
-/* 250 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	exports.decode = exports.parse = __webpack_require__(251);
-	exports.encode = exports.stringify = __webpack_require__(252);
+	exports.decode = exports.parse = __webpack_require__(244);
+	exports.encode = exports.stringify = __webpack_require__(245);
 
 
 /***/ },
-/* 251 */
+/* 244 */
 /***/ function(module, exports) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -30824,7 +30651,7 @@
 
 
 /***/ },
-/* 252 */
+/* 245 */
 /***/ function(module, exports) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -30915,7 +30742,7 @@
 
 
 /***/ },
-/* 253 */
+/* 246 */
 /***/ function(module, exports) {
 
 	module.exports = function() {
@@ -30934,14 +30761,254 @@
 
 
 /***/ },
-/* 254 */
+/* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["SubredditHeaderComponent"] = __webpack_require__(255);
+	/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["CommentListComponent"] = __webpack_require__(248);
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
+/* 248 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(3);
+
+	var CommentListComponent = React.createClass({ displayName: "Comment List Component",
+	  render: function render() {
+
+	    var someData = [];
+
+	    for (var key in this.props.collection) {
+	      var comment = JSON.parse(key);
+	      someData.push(React.createElement(CommentComponent, { comment: comment, user: this.props.collection[key], root: this.props.root }));
+	    }
+
+	    return React.createElement(
+	      "div",
+	      { className: "comment-list-box" },
+	      someData
+	    );
+	  }
+	});
+
+	module.exports = CommentListComponent;
+
+/***/ },
+/* 249 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["NavbarComponent"] = __webpack_require__(250);
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 250 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(3);
+
+	var NavBarComponent = React.createClass({ displayName: "Navbar Component",
+
+	  render: function render() {
+	    return React.createElement(
+	      "header",
+	      { className: "navbar navbar-fixed-top navbar-inverse" },
+	      React.createElement(
+	        "div",
+	        { className: "container" },
+	        React.createElement(
+	          "a",
+	          { id: 'logo', href: this.props.root_path },
+	          "seddit"
+	        ),
+	        React.createElement(
+	          "nav",
+	          null,
+	          React.createElement(
+	            "ul",
+	            { className: "nav navbar-nav navbar-right" },
+	            React.createElement(
+	              "li",
+	              null,
+	              React.createElement(
+	                "a",
+	                { href: this.props.root_path },
+	                "Home"
+	              )
+	            ),
+	            React.createElement(SubredditsDropdownComponent, this.props),
+	            React.createElement(SessionDropdownComponent, this.props)
+	          )
+	        )
+	      )
+	    );
+	  }
+	});
+
+	module.exports = NavBarComponent;
+
+/***/ },
+/* 251 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["PostBriefComponent"] = __webpack_require__(252);
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 252 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(3);
+	var Timestamp = __webpack_require__(151);
+
+	var PostBriefComponent = React.createClass({
+	  displayName: "Post Brief Component",
+
+	  render: function render() {
+	    var link = this.props.post.url ? this.props.post.url : "p/" + this.props.post.id;
+	    return React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "p",
+	        { className: "post-title" },
+	        React.createElement(
+	          "a",
+	          { href: link },
+	          this.props.post.title
+	        )
+	      ),
+	      React.createElement(
+	        "p",
+	        { className: "created-at" },
+	        "Posted ",
+	        React.createElement(Timestamp, { value: this.props.post.created_at, titleFormat: "YYYY/MM/DD HH:mm", relative: true })
+	      ),
+	      React.createElement(
+	        "p",
+	        { className: "created-by" },
+	        "Submitted by ",
+	        React.createElement(
+	          "a",
+	          { href: "u/" + this.props.user },
+	          this.props.user
+	        )
+	      ),
+	      React.createElement(
+	        "p",
+	        { className: "comment-count" },
+	        this.props.comment_count,
+	        " comments"
+	      )
+	    );
+	  }
+	});
+
+	module.exports = PostBriefComponent;
+
+/***/ },
+/* 253 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["SessionDropdownComponent"] = __webpack_require__(254);
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 254 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(3);
+	var Gravatar = __webpack_require__(241);
+
+	var SessionDropdownComponent = React.createClass({ displayName: "Session Dropdown Component",
+
+	  selectComponent: function selectComponent() {
+	    if (this.props.user_signed_in) {
+	      var gravatarStyle = {
+	        "margin-right": "7px",
+	        "border-style": "solid",
+	        "border-width": "1px",
+	        "border-color": "#616161"
+	      };
+	      return React.createElement(
+	        "li",
+	        { className: "dropdown" },
+	        React.createElement(
+	          "a",
+	          { href: "#", className: "dropdown-toggle", "data-toggle": "dropdown", role: "button", "aria-haspopup": "true", "aria-expanded": "false" },
+	          React.createElement(Gravatar, { email: this.props.current_user_email, size: "24", style: gravatarStyle }),
+	          this.props.current_user_username,
+	          React.createElement("span", { className: "caret" })
+	        ),
+	        React.createElement(
+	          "ul",
+	          { className: "dropdown-menu" },
+	          React.createElement(
+	            "li",
+	            null,
+	            React.createElement(
+	              "a",
+	              { href: this.props.root_path + "u/" + this.props.current_user_username },
+	              "View Profile"
+	            )
+	          ),
+	          React.createElement(
+	            "li",
+	            null,
+	            React.createElement(
+	              "a",
+	              { href: this.props.edit_user_registration_path },
+	              "Edit Profile"
+	            )
+	          ),
+	          React.createElement("li", { role: "separator", className: "divider" }),
+	          React.createElement(
+	            "li",
+	            null,
+	            React.createElement(
+	              "a",
+	              { href: this.props.destroy_user_session_path },
+	              "Logout"
+	            )
+	          )
+	        )
+	      );
+	    } else {
+	      return React.createElement(
+	        "li",
+	        null,
+	        React.createElement(
+	          "a",
+	          { href: this.props.new_user_session_path },
+	          "Login"
+	        )
+	      );
+	    }
+	  },
+
+	  render: function render() {
+	    return this.selectComponent();
+	  }
+	});
+
+	module.exports = SessionDropdownComponent;
+
+/***/ },
 /* 255 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["SubredditHeaderComponent"] = __webpack_require__(256);
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -30974,20 +31041,71 @@
 	module.exports = SubredditHeaderComponent;
 
 /***/ },
-/* 256 */
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["UserSummaryComponent"] = __webpack_require__(257);
+	/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["SubredditsDropdownComponent"] = __webpack_require__(258);
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 257 */
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	var React = __webpack_require__(3);
-	var Gravatar = __webpack_require__(248);
+
+	var SubredditsDropdownComponent = React.createClass({ displayName: "Subreddits Dropdown Component",
+
+	  render: function render() {
+	    var listItems = [];
+	    for (var i = 0; i < this.props.subreddits.length; i++) {
+	      listItems.push(React.createElement(
+	        "li",
+	        null,
+	        React.createElement(
+	          "a",
+	          { href: this.props.root_path + "r/" + this.props.subreddits[i].url, title: this.props.subreddits[i].desc },
+	          this.props.subreddits[i].name
+	        )
+	      ));
+	    }
+
+	    return React.createElement(
+	      "li",
+	      { className: "dropdown" },
+	      React.createElement(
+	        "a",
+	        { href: "#", className: "dropdown-toggle", "data-toggle": "dropdown", role: "button", "aria-haspopup": "true", "aria-expanded": "false" },
+	        "SubReddits",
+	        React.createElement("span", { className: "caret" })
+	      ),
+	      React.createElement(
+	        "ul",
+	        { className: "dropdown-menu" },
+	        listItems
+	      )
+	    );
+	  }
+	});
+
+	module.exports = SubredditsDropdownComponent;
+
+/***/ },
+/* 259 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["UserSummaryComponent"] = __webpack_require__(260);
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 260 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(3);
+	var Gravatar = __webpack_require__(241);
 	var Timestamp = __webpack_require__(151);
 
 	var UserSummaryComponent = React.createClass({ displayName: "User Summary Component",

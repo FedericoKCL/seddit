@@ -9,7 +9,7 @@ require("expose?PostBriefComponent!./components/PostBriefComponent.jsx");
 require("expose?PostComponent!./components/PostComponent.jsx");
 require("expose?SessionDropdownComponent!./components/SessionDropdownComponent.jsx");
 require("expose?SubredditHeaderComponent!./components/SubredditHeaderComponent.jsx");
-require("expose?SubdredditDropdownComponent!./components/SubdredditDropdownComponent.jsx");
+require("expose?SubredditsDropdownComponent!./components/SubredditsDropdownComponent.jsx");
 require("expose?UserSummaryComponent!./components/UserSummaryComponent.jsx");
 
 

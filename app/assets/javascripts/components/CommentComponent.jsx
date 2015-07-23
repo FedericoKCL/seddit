@@ -1,7 +1,7 @@
 var React = require("react");
 var Timestamp = require("react-time");
 var Gravatar = require("react-gravatar");
-var CommentComponent = React.createClass({displayName: 'Comment Component',
+var CommentComponent = React.createClass({displayName: "Comment Component",
   render: function() {
     return (
       <div className="row comment-body comment-box">
