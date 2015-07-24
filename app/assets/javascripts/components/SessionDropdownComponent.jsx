@@ -6,15 +6,15 @@ var SessionDropdownComponent = React.createClass({displayName: "Session Dropdown
   selectComponent: function() {
 	if(this.props.user_signed_in){
       var gravatarStyle = {
-        "margin-right": "7px",
-        "border-style": "solid",
-        "border-width": "1px",
-        "border-color": "#616161"
+        "marginRight": "7px",
+        "borderStyle": "solid",
+        "borderWidth": "1px",
+        "borderColor": "#616161"
       };
       return (
         <li className="dropdown">
           <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            <Gravatar email={this.props.current_user_email} size="24" style={gravatarStyle}/>
+            <Gravatar email={this.props.current_user_email} size={24} style={gravatarStyle}/>
             {this.props.current_user_username}
             <span className="caret" />
           </a>
